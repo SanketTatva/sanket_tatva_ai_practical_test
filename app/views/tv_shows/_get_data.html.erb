@@ -1,0 +1,7 @@
+<% tv_shows.each do |tv_show| %>
+  <tr>
+    <td><%= tv_show.channel&.name %></td>
+    <td><%= tv_show.name %></td>
+    <td><%= tv_show.timing.strftime("%H:%M") %></td>
+  </tr>
+<% end %>

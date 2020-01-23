@@ -1,0 +1,19 @@
+<%= render partial: 'layouts/datatable_js' %>
+<table id="infoShow">
+  <thead>
+  <tr>
+    <th>Channel Name</th>
+    <th>Show Name</th>
+    <th>Show Timing</th>
+  </tr>
+  </thead>
+  <tbody>
+    <%= render partial: "get_data", :locals => { tv_shows: @tv_shows } %>
+  </tbody>
+</table>
+
+<script>
+  $(document).ready(function() {
+    $('#infoShow').DataTable();
+  });
+</script>
