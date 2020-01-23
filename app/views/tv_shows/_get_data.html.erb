@@ -2,7 +2,7 @@
   <tr>
     <td><%= tv_show.channel&.name %></td>
     <td><%= tv_show.name %></td>
-    <td><%= tv_show.timing.strftime("%H:%M") %></td>
+    <td><%= tv_show.timing.strftime("%I:%M %p") %></td>
     <% if current_user.present? %>
       <% if current_user.favorited?(tv_show) %>
         <td><%= link_to 'Remove as Favourite', remove_as_favourite_tv_shows_path(id: tv_show.id), method: :post %></td>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1>Reminder of Your Favourite Show</h1>
+<p>
+  You are added <%= @show.name %> as a favourite.<br> and this show started in 30 minutes.
+</p>
+<p>
+  TV Show Name: <%= @show.name %>
+</p>
+<p>
+  Channel Name: <%= @show.channel&.name %>
+</p>
+<p>
+  TV Show Timing: <%= @show.timing.strftime("%I:%M %p") %>
+</p>
+<p>Thanks for joining and have a great day!</p>
+</body>
+</html>

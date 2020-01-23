@@ -58,3 +58,8 @@ gem 'jquery-rails'
 gem 'acts_as_favoritor'
 
 gem 'devise'
+
+gem 'whenever', require: false
+
+gem "figaro"
+
