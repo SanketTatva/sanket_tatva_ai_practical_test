@@ -1,3 +1,10 @@
+<% if current_user.present? %>
+  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= link_to "Sign In", user_session_path %>
+<% end %>
+
+
 <%= render partial: 'layouts/datatable_js' %>
 <table id="infoShow">
   <thead>
@@ -5,6 +12,7 @@
     <th>Channel Name</th>
     <th>Show Name</th>
     <th>Show Timing</th>
+    <th>Add to Favourite</th>
   </tr>
   </thead>
   <tbody>
