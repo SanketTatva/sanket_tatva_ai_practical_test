@@ -3,22 +3,10 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+For sending email notification you can put user_email and user_password this credential for testing purpose in Application.yml like 
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+development:
+  user_email: testpractical.team5@gmail.com
+  user_password: Test@12345
