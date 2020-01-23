@@ -63,3 +63,6 @@ gem 'whenever', require: false
 
 gem "figaro"
 
+gem 'bootstrap', '~> 4.4.1'
+
+gem 'mini_racer'

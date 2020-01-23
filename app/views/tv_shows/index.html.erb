@@ -1,27 +1,27 @@
-<% if current_user.present? %>
-  <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to "Sign In", user_session_path %>
-<% end %>
-
-
 <%= render partial: 'layouts/datatable_js' %>
-<table id="infoShow">
-  <thead>
-  <tr>
-    <th>Channel Name</th>
-    <th>Show Name</th>
-    <th>Show Timing</th>
-    <th>Add to Favourite</th>
-  </tr>
-  </thead>
-  <tbody>
+
+<div class="container">
+  <h2>TV Show List</h2>
+  <table class="table table-bordered display" id="infoShow">
+    <thead>
+    <tr>
+      <th>Channel Name</th>
+      <th>Show Name</th>
+      <th>Show Timing</th>
+      <th>Add to Favourite</th>
+    </tr>
+    </thead>
+    <tbody>
     <%= render partial: "get_data", :locals => { tv_shows: @tv_shows } %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>
 
 <script>
   $(document).ready(function() {
     $('#infoShow').DataTable();
   });
 </script>
+
+
+
